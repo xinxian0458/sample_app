@@ -3,16 +3,33 @@ ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+# gem 'pg', '0.15.1'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
 	gem 'rspec-rails', '2.13.1'
+	gem 'guard-rspec', '2.5.0'
+	gem 'spork-rails', github: 'railstutorial/spork-rails'
+	gem 'guard-spork', '1.5.0'
+	gem 'childprocess', '0.3.9'
+	require 'rbconfig'
+	gem 'wdm', '>=0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 end
 
 group :test do
 	gem 'selenium-webdriver', '2.0.0'
 	gem 'capybara', '2.1.0'
+
+	# Uncomment this line on OS X.
+	# gem 'growl', '1.0.3'
+
+	#Uncomment these lines on Linux
+	# gem 'libnotify', '0.8.0'
+
+	#Uncomment these lines on Windows
+	# gem 'rb_notify', '0.0.4'
+	# gem 'win32console', '1.3.2'
 end
 
 # Use SCSS for stylesheets
@@ -44,6 +61,7 @@ end
 group :production do
 	gem 'pg', '0.15.1'
 end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
