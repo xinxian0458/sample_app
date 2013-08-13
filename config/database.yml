@@ -29,7 +29,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: sample_app
+  database: d7ih1uaificb5q
   pool: 5
-  username: rails
-  password: rails
+  username: ivswaxhncudcpn
+  password: 3Jk2uaNTPHQitZcnZOql-Jo-8C
